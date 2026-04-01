@@ -1502,3 +1502,162 @@ Consider this HTML: `<div id="main" class="container">Text</div>`
 3. `#main { color: blue; }` (Score: 100)
 
 **Result:** The text will be **blue** because the ID has the highest specificity.
+
+---
+
+## CSS vertical-align Property
+
+The `vertical-align` property is used to set the vertical alignment of an **inline**, **inline-block**, or **table-cell** element. It does not work on block-level elements (like `<div>` or `<p>`) unless they are inside a table or have their display changed.
+
+---
+
+### Common Values for Inline Elements
+
+These values align the element relative to the line-height of its parent.
+
+* **baseline:** The default value. Aligns the baseline of the element with the baseline of the parent.
+* **top:** Aligns the top of the element with the top of the tallest element on the line.
+* **bottom:** Aligns the bottom of the element with the lowest element on the line.
+* **middle:** Aligns the element in the middle of the surrounding text (usually used for aligning icons with text).
+* **text-top:** Aligns the top of the element with the top of the parent element's font.
+* **text-bottom:** Aligns the bottom of the element with the bottom of the parent element's font.
+* **sub:** Aligns the element as a subscript.
+* **super:** Aligns the element as a superscript.
+
+---
+
+### Usage in Tables
+
+In a table, `vertical-align` is used to align the content within a table cell (`<td>` or `<th>`).
+
+* **top:** Aligns content to the top of the cell.
+* **middle:** Centers the content vertically within the cell.
+* **bottom:** Aligns content to the bottom of the cell.
+
+---
+
+### Important Distinction: Vertical Centering
+
+A common mistake is trying to use `vertical-align: middle` to center a `<div>` inside another `<div>`.
+
+* **For Block Elements:** `vertical-align` will **not** work. To center block elements vertically, you should use **Flexbox** (`align-items: center;`) or **CSS Grid**.
+* **For Inline/Inline-block:** It works perfectly for aligning images, icons, or spans next to text.
+
+---
+
+
+
+## CSS Grid Terminology
+
+CSS Grid is a 2D layout system that allows you to align content into rows and columns. To use it effectively, you must understand the specific terms used to describe the parts of a grid.
+
+---
+
+### 1. Grid Track
+
+A **Grid Track** is the space between two adjacent grid lines. You can think of them as the actual "rows" or "columns" of the grid.
+
+* **Column Track:** The vertical space between two column lines.
+* **Row Track:** The horizontal space between two row lines.
+* **Sizing:** Defined using `grid-template-columns` and `grid-template-rows`.
+
+---
+
+### 2. Grid Line
+
+**Grid Lines** are the horizontal and vertical dividing lines that create the grid.
+
+* **Numbering:** They are automatically numbered starting from 1. For example, a grid with 3 columns will have 4 column lines.
+* **Usage:** You use line numbers to tell a grid item where to start and end using properties like `grid-column-start` or `grid-row-end`.
+
+---
+
+### 3. Grid Cell
+
+A **Grid Cell** is the smallest unit on a CSS grid.
+
+* **Definition:** It is the space between two adjacent row lines and two adjacent column lines.
+* **Analogy:** It is exactly like a single cell in an Excel spreadsheet or a table.
+
+---
+
+### 4. Grid Area
+
+A **Grid Area** is a total space surrounded by four grid lines.
+
+* **Composition:** A grid area can consist of a single grid cell or any number of adjacent grid cells.
+* **Naming:** You can name areas using `grid-template-areas` and then assign items to those areas using `grid-area`.
+
+---
+
+### Comparison Summary
+
+| Term | Description | Visual Analogy |
+| --- | --- | --- |
+| **Line** | The dividers | The "lines" on graph paper |
+| **Track** | A full row or column | A complete street (vertical or horizontal) |
+| **Cell** | A single intersection | A single "block" or "room" |
+| **Area** | A collection of cells | A "neighborhood" or a "suite" |
+
+---
+
+### Important Properties
+
+* **grid-column / grid-row:** Shorthand to position items using **Grid Lines**.
+* **gap (grid-gap):** The space between **Grid Tracks**.
+
+
+## CSS Grid vs. Flexbox
+
+While both are layout modules, the fundamental difference is that **Flexbox** is designed for one-dimensional layouts and **Grid** is designed for two-dimensional layouts.
+
+---
+
+### 1. One Dimension vs. Two Dimensions
+
+* **Flexbox (One-Dimensional):** Deals with either a row **or** a column at a time. It is best for aligning items in a linear direction.
+* **Grid (Two-Dimensional):** Deals with both rows **and** columns simultaneously. It is best for complex layouts where you need to control the position of items in both directions.
+
+---
+
+### 2. Content-First vs. Layout-First
+
+* **Flexbox is Content-First:** The size of the items usually determines the layout. You place items in a container and let them wrap or shrink based on their size.
+* **Grid is Layout-First:** You define the layout (the columns and rows) first, and then you place items into the predefined cells/areas.
+
+---
+
+### 3. Key Differences in Alignment
+
+| Feature | Flexbox | CSS Grid |
+| --- | --- | --- |
+| **Axis** | Main Axis (horizontal or vertical) | Two axes (horizontal and vertical) |
+| **Gaps** | Managed via `gap` or margins | Managed via `gap` (row-gap, column-gap) |
+| **Overlapping** | Harder; requires absolute positioning | Easy; items can occupy the same cells |
+| **Item Centering** | `justify-content` and `align-items` | `justify-self` and `align-self` (per cell) |
+
+---
+
+### 4. When to Use Which?
+
+#### Use Flexbox when:
+
+* You have a small set of items (like a navbar or buttons).
+* You want the items to determine their own width/height.
+* You only need to align items in one direction.
+
+#### Use Grid when:
+
+* You have a complex layout (like a full-page dashboard or a magazine-style layout).
+* You need to align items in both rows and columns.
+* You need items to overlap each other.
+* You want to define the structure of the page before adding content.
+
+---
+
+### Can they work together?
+
+Yes. It is very common to use **Grid** for the overall page structure (header, sidebar, main content, footer) and then use **Flexbox** inside those grid areas to align smaller items like navigation links or icons.
+
+---
+

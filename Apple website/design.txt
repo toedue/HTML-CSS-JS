@@ -1,0 +1,38 @@
+outer wrapper - div
+    header wrapper - header
+        internal wrapper - div
+            logo wrapper - div
+                - Display logo image here
+                - Linked to the home page
+            cloase logo wrapper
+
+            links wrapper - div
+                - Display a List of links here
+                - link them to the proper page
+            close links wrapper
+
+            search wrapper - div
+                - Display search icon image here
+                - Link to the search page
+            close search wrapper
+
+            cart wrapper - div
+                - Display cart image here
+                - link to the cart page
+            close cart wrapper
+
+    close internal wrapper
+close header wrapper
+
+main highlight wrapper - section
+    internal wrapper - div
+        model - div
+        close model
+
+        title - div
+        close title
+
+        brief description - div
+        close brief description
+
+        links wrapper - div

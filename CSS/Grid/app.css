@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container{
+    font-size: 40px;
+    display: grid;
+}
+
+.grid-item-1 {
+background-color:red;
+}
+
+.grid-item-2{
+background-color:green;
+}
+.grid-item-3{
+background-color:blue;
+}
+.grid-item-4{
+background-color:yellow;
+}
+.grid-item-5{
+background-color:purple;
+}
+.grid-item-6{
+background-color:orange;
+}
+.grid-item-7{
+background-color:grey;
+}
+.grid-item-8{
+background-color:pink;
+}
