@@ -1,35 +1,44 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.grid-container{
-    font-size: 40px;
-    display: grid;
+.grid-container {
+  font-size: 40px;
+  display: grid;
+  grid-template-columns: 200px 200px;
+  height: 400px;
+  justify-items: center;
+  align-items: center;
 }
 
 .grid-item-1 {
-background-color:red;
+  background-color: red;
 }
 
-.grid-item-2{
-background-color:green;
+.grid-item-2 {
+  background-color: green;
 }
-.grid-item-3{
-background-color:blue;
+.grid-item-3 {
+  background-color: blue;
+  justify-self: end;
+  align-self: start;
 }
-.grid-item-4{
-background-color:yellow;
+.grid-item-4 {
+  background-color: yellow;
 }
-.grid-item-5{
-background-color:purple;
+.grid-item-5 {
+  background-color: purple;
+  /* grid-row: 3 / span 2; */
 }
-.grid-item-6{
-background-color:orange;
+.grid-item-6 {
+  background-color: orange;
+  /* grid-row: 1/2;
+  grid-column: 2/3; */
 }
-.grid-item-7{
-background-color:grey;
+.grid-item-7 {
+  background-color: grey;
 }
-.grid-item-8{
-background-color:pink;
+.grid-item-8 {
+  background-color: pink;
 }
