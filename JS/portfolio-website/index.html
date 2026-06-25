@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abdulkadir's Portfolio Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .project {
+        display: flex;
+        align-items: center;
+        background-image: linear-gradient(to right, rgb(191, 191, 239), rgb(173, 233, 194));
+      }
+
+      .project img {
+        width: 50vw;
+      }
+
+      .project-info{
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">Abdulkadir's Portfolio</div>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Services</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+    <main>
+      <section class="hero">
+        <div class="hero-left">
+          <div class="one">Welcome to my World</div>
+          <div class="two">
+            I am a <span class="bold">&lt;Developer/&gt;</span>
+          </div>
+          <div class="button-container">
+            <button class="btn">Contact me</button>
+            <button class="btn">Services</button>
+          </div>
+        </div>
+        <div class="hero-right">
+          <img src="pic.jpg" alt="Abdulkadir the developer" class="my-image" />
+        </div>
+      </section>
+
+      <section class="projects">
+        <div class="project">
+          <div class="project-image">
+            <img
+              src="https://www.ilovephd.com/wp-content/uploads/2025/07/An-AI-machine-writing-code-for-AI-project.jpg"
+            />
+          </div>
+          <div class="project-info">
+            <div class="text">AI Chatbot for Household Tasks</div>
+            <p>We created an AI chatbot to do household work like ironing clothes, cooking food. This project is the best and state of the art of its kind</p>
+            <div class="buttons">
+              <button class="btn">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
